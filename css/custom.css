@@ -1,0 +1,29 @@
+#nav{
+    background-color: lightgrey; 
+    max-width: inherit;
+}
+#tile-row{
+   
+    border-width: 2px;
+    border-style: solid;
+}
+#tile-col{
+    border-width: 2px;
+    border-style: solid;
+}
+#card{
+    line-height: 20px;
+}
+.map-container{
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+    }
+    .map-container iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+    }
