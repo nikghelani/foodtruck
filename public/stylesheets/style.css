@@ -7165,8 +7165,18 @@ body {
   background-color: #f5f5f5; }
 
 .carouselsize {
-  height: 800px;
-  width: 1900px;
-  background-color: pink; }
+  max-height: 500px;
+  max-width: 1600px;
+  background-color: pink;
+  overflow: hidden; }
+
+#navmenu {
+  padding: 60px;
+  background-color: lightpink; }
+
+.nav-link {
+  color: black;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-style: bold; }
 
 /*# sourceMappingURL=style.css.map */
