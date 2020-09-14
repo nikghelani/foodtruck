@@ -9,6 +9,7 @@ var sassMiddleware = require('node-sass-middleware');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var trucklistRouter = require('./routes/trucklist');
+var mapRouter = require('./routes/googlemap');
 
 
 var app = express();
@@ -34,7 +35,7 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 //to use the trucklist.js file when requested.
 app.use('/trucklist', trucklistRouter);
-
+app.use('/location', mapRouter);
 
 
 // catch 404 and forward to error handler
