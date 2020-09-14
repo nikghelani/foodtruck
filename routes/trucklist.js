@@ -1,9 +1,7 @@
 var express = require('express');
-var trucklistController = require('../controllers/trucklist');
-var router = express();
+var router = express.Router();
 
-router
- .route('/trucklist')
- .get(trucklistController.trucklist)
-
-module.exports = router;
+router.get('/trucklist', function(req, res, next) {
+  res.send('Trucklist');
+});
+module.exports = router;  

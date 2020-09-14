@@ -5,6 +5,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var sassMiddleware = require('node-sass-middleware');
 
+// Require for every page created
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var trucklistRouter = require('./routes/trucklist');
@@ -27,9 +28,12 @@ app.use(sassMiddleware({
 }));
 app.use(express.static(path.join(__dirname, 'public')));
 
+// USE the path for var created with require
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+//to use the trucklist.js file when requested.
 app.use('/trucklist', trucklistRouter);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
