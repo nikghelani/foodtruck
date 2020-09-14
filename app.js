@@ -10,6 +10,7 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var trucklistRouter = require('./routes/trucklist');
 
+
 var app = express();
 
 // view engine setup
@@ -33,6 +34,7 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 //to use the trucklist.js file when requested.
 app.use('/trucklist', trucklistRouter);
+
 
 
 // catch 404 and forward to error handler

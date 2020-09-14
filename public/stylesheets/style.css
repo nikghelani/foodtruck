@@ -7187,14 +7187,17 @@ body {
   background-color: white; }
 
 .thumbs rows {
-  margin-top: 10px;
-  background-color: pink; }
+  margin-top: 10px; }
+
+a img:hover {
+  transform: scale(1.1);
+  transition: transform 0.2s; }
 
 body {
   background-image: url(../images/fastfood.jpg); }
 
 .briefinfo {
-  background-color: #e9e8eb;
+  background-color: rgba(230, 230, 230, 0.4);
   margin-top: 10px;
   margin-bottom: 10px;
   padding: 20px; }

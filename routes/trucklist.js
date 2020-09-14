@@ -1,7 +1,8 @@
 var express = require('express');
 var router = express.Router();
 
-router.get('/trucklist', function(req, res, next) {
-  res.send('Trucklist');
+router.get('/', function(req, res) {
+  res.render('trucklist', { title: 'trucks in towns' });
 });
+
 module.exports = router;  
