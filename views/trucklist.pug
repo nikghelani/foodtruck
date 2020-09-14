@@ -1,4 +1,49 @@
-extends ../layout
+extends layout
 
 block content
-  p Trucklist
+  .container
+    .card.mb-3(style='max-width: 1100px;')
+      .row.no-gutters
+        .col-md-2
+         img.card-img(src='../images/sampleimage.jpg' alt='...')
+        .col-md-10
+          .card-body
+            h5.card-title Restaurant Name
+            p.card-text
+              | Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe voluptas accusantium cupiditate tempora laborum nihil repellendus repudiandae blanditiis ducimus laboriosam obcaecati amet placeat eveniet voluptates ratione, doloremque, quaerat dignissimos dicta!
+  br
+  .container
+    .card.mb-3(style='max-width: 1100px;')
+      .row.no-gutters
+        .col-md-2
+         img.card-img(src='../images/sampleimage.jpg' alt='...')
+        .col-md-10
+          .card-body
+            h5.card-title Restaurant Name
+            p.card-text
+              | Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe voluptas accusantium cupiditate tempora laborum nihil repellendus repudiandae blanditiis ducimus laboriosam obcaecati amet placeat eveniet voluptates ratione, doloremque, quaerat dignissimos dicta!
+  br
+  .container
+    .card.mb-3(style='max-width: 1100px;')
+      .row.no-gutters
+        .col-md-2
+         img.card-img(src='../images/sampleimage.jpg' alt='...')
+        .col-md-10
+          .card-body
+            h5.card-title Restaurant Name
+            p.card-text
+              | Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe voluptas accusantium cupiditate tempora laborum nihil repellendus repudiandae blanditiis ducimus laboriosam obcaecati amet placeat eveniet voluptates ratione, doloremque, quaerat dignissimos dicta!
+
+  br
+  nav(aria-label='Page navigation example')
+  ul.pagination.justify-content-center
+    li.page-item.disabled
+      a.page-link(href='#' tabindex='-1') Previous
+    li.page-item
+      a.page-link(href='#') 1
+    li.page-item
+      a.page-link(href='#') 2
+    li.page-item
+      a.page-link(href='#') 3
+    li.page-item
+      a.page-link(href='#') Next
