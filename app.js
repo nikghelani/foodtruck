@@ -5,6 +5,22 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var sassMiddleware = require('node-sass-middleware');
 
+//Mongoose connectivity goes here
+// import mongoose package to app.js
+var mongoose = require('mongoose')
+mongoose.connect('mongodb://localhost/foodtruck', {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+});
+
+// Mongoose connection string
+var db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error:'));
+db.once('open', function() {
+    console.log('db connected.');
+});
+
+
 // Require for every page created
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
