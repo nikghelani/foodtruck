@@ -5,13 +5,16 @@ var trucksSchema = new Schema(
   {
     title: { type: String, required: true },
     description: { type: String, required: true },
-    thumbnail: { type: String, require: false },
+    thumbnail: { type: String },
     category: { type: String, required: true },
-    bizlocation: { type: String, required: false },
+    bizlocation: { type: String },
     streetlocation: { type: String, required: true },
-    direction: { type: String, required: false }, //NE, NW, SE, SW
-    city: { type: String, required: true}
-
-}, { timestamps: true });
+    direction: { type: String }, //NE, NW, SE, SW
+  },
+  { 
+    timestamps: true 
+  });
 
 var Truck = mongoose.model('Truck', trucksSchema)
+
+module.exports = Truck;

@@ -1,40 +1,19 @@
 extends layout
 
 block content
-  .container
-    .card.mb-3(style='max-width: 1100px;')
-      .row.no-gutters
-        .col-md-2
-         img.card-img(src='../images/sampleimage.jpg' alt='...')
-        .col-md-10
-          .card-body
-            h5.card-title Restaurant Name
-            p.card-text
-              | Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe voluptas accusantium cupiditate tempora laborum nihil repellendus repudiandae blanditiis ducimus laboriosam obcaecati amet placeat eveniet voluptates ratione, doloremque, quaerat dignissimos dicta!
-  br
-  .container
-    .card.mb-3(style='max-width: 1100px;')
-      .row.no-gutters
-        .col-md-2
-         img.card-img(src='../images/sampleimage.jpg' alt='...')
-        .col-md-10
-          .card-body
-            h5.card-title Restaurant Name
-            p.card-text
-              | Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe voluptas accusantium cupiditate tempora laborum nihil repellendus repudiandae blanditiis ducimus laboriosam obcaecati amet placeat eveniet voluptates ratione, doloremque, quaerat dignissimos dicta!
-  br
-  .container
-    .card.mb-3(style='max-width: 1100px;')
-      .row.no-gutters
-        .col-md-2
-         img.card-img(src='../images/sampleimage.jpg' alt='...')
-        .col-md-10
-          .card-body
-            h5.card-title Restaurant Name
-            p.card-text
-              | Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe voluptas accusantium cupiditate tempora laborum nihil repellendus repudiandae blanditiis ducimus laboriosam obcaecati amet placeat eveniet voluptates ratione, doloremque, quaerat dignissimos dicta!
+  .container 
+    // Each loop to print all item in schema
+    each truck in Truck
+      .card.mb-3(style='max-width: 1100px;')
+        .row.no-gutters
+          .col-md-2
+            img.card-img(src=truck.thumbnail)
+          .col-md-10
+            .card-body
+              h5.card-title= truck.title
+              p.card-text= truck.description
 
-  br
+  //Pagination             
   nav(aria-label='Page navigation example')
   ul.pagination.justify-content-center
     li.page-item.disabled

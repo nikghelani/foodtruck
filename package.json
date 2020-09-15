@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node ./bin/www",
+    "seed": "node ./database/seed.js"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
@@ -14,6 +15,7 @@
     "http-errors": "~1.6.3",
     "jquery": "^1.12.4",
     "mongoose": "^5.10.5",
+    "mongoose-seed": "^0.6.0",
     "morgan": "~1.9.1",
     "node-sass-middleware": "0.11.0",
     "popper.js": "^1.16.1",
