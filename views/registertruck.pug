@@ -7,19 +7,19 @@ block content
     form
       .form-group
         label(for='inputTitle') Business Name
-        input#inputText.form-control(type='text' placeholder='Title of your Truck')
+        input#inputText.form-control(type='text' placeholder='Title of your Truck' name='title')
       .form-group
         label(for='inputDesc') Description
-        textarea#inputTextarea.form-control(type='textarea' placeholder='Tell us about your FoodTruck business')
+        textarea#inputTextarea.form-control(type='textarea' placeholder='Tell us about your FoodTruck business' name='description')
       
-      .form-group.custom-file
-        input#customFile.custome-file-input(type='file')
-        label.custom-file-label(for='customFile') Upload your Logo Here...
+      //- .form-group.custom-file
+      //-   input#customFile.custome-file-input(type='file')
+      //-   label.custom-file-label(for='customFile') Upload your Logo Here...
       
       .form-group
         label(for='inputCategory') Category
             select#inputState.form-control
-              option(selected='Burger') Choose...
+              option(selected='Burger' name='category') Choose...
               option Burger
               option Pizza
               option Sweet Treats
@@ -27,37 +27,39 @@ block content
               option Take N Go
               
       .form-group.addressGroup
-        label(for='inputAddress') Address
+        label(for='inputAddress' name='bizlocation') Address
+        input#inputAddress.form-control(type='text' placeholder='Where are you established')
+        label(for='inputAddress' name='streetlocation') Street Location
         input#inputAddress.form-control(type='text' placeholder='Where are you mostly found')
-        label(for='inputDirection') Direction
+        label(for='inputDirection' name='direction') Direction
             select#inputState.form-control
-              option(selected='') Choose...
+              option(selected='' name='direction') Choose...
               option NE
               option SE
               option SW
               option NW
-        .form-row
-          .form-group.col-md-6
-            label(for='inputCity') City
-            input#inputCity.form-control(type='text')
-          .form-group.col-md-4
-            label(for='inputState') Province
-            select#inputState.form-control
-              option(selected='Alberta') Choose...
-              option Alberta
-              option Ontario
-              option Saskatchewan
-              option Quebec
-              option British Columbia
-              option Manitoba
-              option P.E.I
-          .form-group.col-md-2
-            label(for='inputPostal') Postal
-            input#inputZip.form-control(type='text')
+      //-   .form-row
+      //-     .form-group.col-md-6
+      //-       label(for='inputCity') City
+      //-       input#inputCity.form-control(type='text')
+      //-     .form-group.col-md-4
+      //-       label(for='inputState') Province
+      //-       select#inputState.form-control
+      //-         option(selected='Alberta') Choose...
+      //-         option Alberta
+      //-         option Ontario
+      //-         option Saskatchewan
+      //-         option Quebec
+      //-         option British Columbia
+      //-         option Manitoba
+      //-         option P.E.I
+      //-     .form-group.col-md-2
+      //-       label(for='inputPostal') Postal
+      //-       input#inputZip.form-control(type='text')
       
-      .form-group
-        .form-check
-          input#gridCheck.form-check-input(type='checkbox')
-          label.form-check-label(for='gridCheck')
-            | I agree to terms of service
+      //- .form-group
+      //-   .form-check
+      //-     input#gridCheck.form-check-input(type='checkbox')
+      //-     label.form-check-label(for='gridCheck')
+      //-       | I agree to terms of service
       button.btn.btn-success(type='submit') Register
