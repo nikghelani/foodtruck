@@ -3,7 +3,7 @@ var registerController = require('../controllers/registertruck');
 var router = express.Router();
 
 router
-  .route('/registertruck')
+  .route('registertruck')
   .get(registerController.registerForm)
   .post(registerController.create)
 

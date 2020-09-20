@@ -7,22 +7,24 @@ block content
       .card.mb-3(style='max-width: 1100px;')
         .row.no-gutters
           .col-md-2
-            img.card-img(src=truck.thumbnail)
+            //Crated a dynamic link for each Thumnails
+            a(href='trucklist/${truck.title}')
+              img.card-img(src=truck.thumbnail)
           .col-md-10
             .card-body
               h5.card-title= truck.title
               p.card-text= truck.description
 
   //Pagination             
-  nav(aria-label='Page navigation example')
-  ul.pagination.justify-content-center
-    li.page-item.disabled
-      a.page-link(href='#' tabindex='-1') Previous
-    li.page-item
-      a.page-link(href='#') 1
-    li.page-item
-      a.page-link(href='#') 2
-    li.page-item
-      a.page-link(href='#') 3
-    li.page-item
-      a.page-link(href='#') Next
+  //- nav(aria-label='Page navigation example')
+  //- ul.pagination.justify-content-center
+  //-   li.page-item.disabled
+  //-     a.page-link(href='#' tabindex='-1') Previous
+  //-   li.page-item
+  //-     a.page-link(href='#') 1
+  //-   li.page-item
+  //-     a.page-link(href='#') 2
+  //-   li.page-item
+  //-     a.page-link(href='#') 3
+  //-   li.page-item
+  //-     a.page-link(href='#') Next
