@@ -1,10 +1,13 @@
 var express = require('express');
-var registerController = require('../controllers/registertruck');
+const Truck = require('../models/trucks');
 var router = express.Router();
 
-router
-  .route('registertruck')
-  .get(registerController.registerForm)
-  .post(registerController.create)
+//Calling response to render registertruck.pug file
+router.get('/', function(req, res){
+  res.render('registertruck');
+});
 
+router.post('/', function(req, res){
+  res.send('Registered...')
+});
 module.exports = router;

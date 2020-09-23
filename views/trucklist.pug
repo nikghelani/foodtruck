@@ -8,7 +8,7 @@ block content
         .row.no-gutters
           .col-md-2
             //Crated a dynamic link for each Thumnails
-            a(href='trucklist/${truck.title}')
+            a(href=trucklist/=truck.title)
               img.card-img(src=truck.thumbnail)
           .col-md-10
             .card-body

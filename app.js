@@ -26,7 +26,8 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var trucklistRouter = require('./routes/trucklist');
 var mapRouter = require('./routes/googlemap');
-var registerRouter = require('./routes/registertruck');
+var registertruck = require('./routes/registertruck');
+
 
 
 var app = express();
@@ -53,7 +54,10 @@ app.use('/users', usersRouter);
 //to use the trucklist.js file when requested.
 app.use('/trucklist', trucklistRouter);
 app.use('/location', mapRouter);
-app.use('/registertruck', registerRouter);
+app.use('/registertruck', registertruck);
+
+
+
 
 
 // catch 404 and forward to error handler
